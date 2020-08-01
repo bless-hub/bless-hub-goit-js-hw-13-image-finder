@@ -1,9 +1,12 @@
-import './styles.css';
-import { apiService } from './js/apiService';
+import './styles.scss';
+import { loadMoreImg, handleSubmit } from './js/apiService.js';
+import { refs } from './js/refs';
+import { openModal } from './js/components/modal';
 
-const refs = {
-  gallery: document.querySelector('.gallery'),
-};
-console.log(refs.gallery);
+refs.input.addEventListener('submit', handleSubmit);
+refs.button.addEventListener('click', loadMoreImg);
+refs.gallery.addEventListener('click', openModal);
 
-apiService();
+//===========================================================================================
+
+//=============================================================================================
